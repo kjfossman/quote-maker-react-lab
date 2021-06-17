@@ -1,4 +1,5 @@
 export default (state = [], action) => {
+  console.log('top level')
   switch (action.type){
     case "ADD_QUOTE":
 
@@ -9,6 +10,7 @@ export default (state = [], action) => {
       return state.filter(q => q.id !== action.quoteId)
 
     case "UPVOTE_QUOTE":
+      console.log('next step')
       const quoteIndex = state.findIndex(q => q.id === action.quoteId)
       const quote = {...state[quoteIndex], votes: state[quoteIndex].votes + 1}
       

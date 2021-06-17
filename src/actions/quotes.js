@@ -14,8 +14,9 @@ export function removeQuote(id){
 }
 
 export function upvoteQuote(id){
+    console.log('made it')
     return {
-        type: "UPVOTE_QUOTE", 
+        type: "UPVOTE_QUOTE",
         quoteId: id
     }
 }

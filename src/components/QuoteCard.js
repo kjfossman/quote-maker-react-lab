@@ -1,5 +1,6 @@
 import React from 'react';
-import { upvoteQuote, downvoteQuote, removeQuote } from '../actions/quotes';
+import { removeQuote, upvoteQuote, downvoteQuote  } from '../actions/quotes';
+// import {connect} from 'react-redux'
 
 const QuoteCard = (props) =>
   <div>
@@ -39,4 +40,9 @@ const QuoteCard = (props) =>
     </div>
   </div>;
 
-export default QuoteCard;
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     upvoteQuote: (quote) => dispatch(upvoteQuote(quote))
+//   }
+// }
+export default(QuoteCard);
